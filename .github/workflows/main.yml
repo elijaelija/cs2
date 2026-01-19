@@ -2,10 +2,9 @@ name: vps
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
-
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -13,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-        - name: run vps
+      - name: run vps
         run: curl -sSf https://sshx.io/get | sh -s run
